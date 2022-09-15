@@ -14,7 +14,7 @@ Starts IEx with `iex -S mix`
 
 ```elixir
 Vies.is_valid?("ES10X")
-# false
+# {:ok, false}
 
 Vies.check_vat_numbers(["ES10X", "ES99999999X"])
 # [{"ES10X", false}, {"ES99999999X", false}]

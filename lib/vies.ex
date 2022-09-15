@@ -13,8 +13,8 @@ defmodule Vies do
 
   ## Examples
 
-      iex> Vies.check_vat_numbers(["ES10X", "ES99999999X"])
-      [{"ES10X", false}, {"ES99999999X", false}]
+      iex> Vies.check_vat_numbers(["ES10X", "ES99999999X", "ES15S"])
+      [{"ES10X", false}, {"ES99999999X", true}, {"ES15S", nil}]
   """
   def check_vat_numbers(vat_numbers) do
     for vat <- vat_numbers do
@@ -31,7 +31,10 @@ defmodule Vies do
   ## Examples
 
       iex> Vies.is_valid?("ES99999999X")
-      false
+      {:ok, false}
+
+      iex> Vies.is_valid?("ES10X")
+      {:error, "Could not get a response"}
   """
   def is_valid?(vat_number) do
     request = """
