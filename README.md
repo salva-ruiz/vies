@@ -1,6 +1,6 @@
 # Vies
 
-A utility to query the European SOAP VIES web service
+A utility to query the European SOAP VIES web service using the https://ec.europa.eu/taxation_customs/vies/services/checkVatService.wsdl XML schema. You can check https://ec.europa.eu/taxation_customs/vies/#/faq (Q18) for more information.
 
 ## Install the dependencies
 
